@@ -1,16 +1,94 @@
-# React + Vite
+# Azan Tech 💻✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A magical, fun, and child-friendly coding adventure platform** built for K-12 kids to learn programming through games, robots, websites, and creative projects!
 
-Currently, two official plugins are available:
+![Project Preview](https://via.placeholder.com/1280x720?text=Little+Africa+Coding+Hero+Screenshot)  
+*(Replace this with a real screenshot of your VideoHero / HeroHeader component)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 About the Project
 
-## React Compiler
+Azn Tech is an interactive web app designed to make coding **exciting and accessible** for young learners. With a playful violet-gold-white theme, cute illustrations, smooth animations, and magical components, kids can explore:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Interactive games and apps
+- Robot adventures
+- Website building
+- Fun coding puzzles
 
-## Expanding the ESLint configuration
+Built with love using modern tools, perfect for classrooms, homeschooling, or self-learning!
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features
+
+- Full-screen immersive **video hero** with sparkling overlays
+- Responsive & child-friendly UI (mobile-first)
+- Magical components:
+  - Navbar with robot mascot
+  - Hero header & split sections
+  - Features cards
+  - Projects & image carousels
+  - Infinite scrolling gallery
+  - FAQ accordion
+  - Contact section
+- Smooth animations & hover effects (zoom, glow, sparkles)
+- Custom Tailwind theme (soft violet + warm gold)
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: React 18+
+- **Build Tool**: Vite (fast & modern)
+- **Styling**: Tailwind CSS v4 (utility-first + custom theme)
+- **Icons**: Lucide React
+- **Carousel**: Embla Carousel (smooth & performant)
+- **Fonts**: Fredoka (titles) + Quicksand (body) — Google Fonts
+- **Deployment-ready**: Easy to host on Vercel/Netlify
+
+
+## 🚀 Quick Start (Local Development)
+
+### Prerequisites
+
+- Node.js ≥ 18
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+
+   ```bash
+   git clone https://github.com/L-JM3214/Azan.git
+   cd Azan
+
+Install dependenciesBashnpm install
+# or
+yarn install
+Start the development serverBashnpm run dev
+# or
+yarn dev→ Open http://localhost:5173 in your browser
+
+Build for Production
+Bashnpm run build
+# Preview locally
+npm run preview
+📂 Project Structure
+textazan/
+├── public/               # Static assets (favicons, etc.)
+├── src/
+│   ├── assets/           # Images & videos
+│   ├── components/       # All reusable UI pieces
+│   │   ├── ContactSection.jsx
+│   │   ├── FAQAccordion.jsx
+│   │   ├── FeaturesSection.jsx
+│   │   ├── HeroHeader.jsx
+│   │   ├── ImageGalleryCarousel.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── ProjectsCarousel.jsx
+│   │   ├── ScrollingGallery.jsx
+│   │   ├── SplitHeader.jsx
+│   │   └── VideoHero.jsx
+│   ├── App.jsx           # Main layout
+│   ├── index.css         # Global styles + Tailwind config
+│   └── main.jsx          # Entry point
+├── tailwind.config.js    # Tailwind configuration
+├── vite.config.js        # Vite configuration
+├── .gitignore
+├── package.json
+└── README.md
