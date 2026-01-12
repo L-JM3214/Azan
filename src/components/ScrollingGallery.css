@@ -1,0 +1,72 @@
+/* src/components/ScrollingGallery.css */
+
+/* Container for infinite scroll */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 200vw;
+    transform: translateX(-25%);
+  }
+  
+  /* Each row */
+  .grid-row {
+    display: flex;
+    gap: 1.5rem;
+    animation: scroll 60s linear infinite;
+    will-change: transform;
+  }
+  
+  .row-1 {
+    animation-duration: 70s; /* slightly slower */
+  }
+  
+  .row-2 {
+    animation-direction: reverse;
+    animation-duration: 55s; /* opposite & faster */
+  }
+  
+  /* Individual image wrapper */
+  .grid-item {
+    flex-shrink: 0;
+  }
+  
+  /* Image base size - responsive */
+  .gallery-img {
+    width: 30vw;
+    min-width: 280px;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  /* Animation keyframes */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  /* Pause on hover for interactivity */
+  .grid-row:hover {
+    animation-play-state: paused;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .gallery-img {
+      height: 320px;
+      min-width: 240px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .grid-row {
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .gallery-img {
+      height: 240px;
+      min-width: 200px;
+    }
+  }

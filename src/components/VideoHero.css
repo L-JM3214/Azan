@@ -1,0 +1,23 @@
+/* src/components/VideoHero.css */
+
+/* Ensure video covers full area smoothly */
+.hero-video {
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  /* Fallback when video can't play (e.g., mobile data saver) */
+  .video-fallback {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .video-hero {
+      min-height: 80vh;
+    }
+  }

@@ -1,0 +1,16 @@
+/* src/components/FAQAccordion.css */
+
+/* Smooth expand animation enhancement */
+.max-h-96 {
+    max-height: 24rem; /* Adjust if needed for longer answers */
+  }
+  
+  /* Extra hover sparkle on card */
+  .card-fun:hover {
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.3) !important;
+  }
+  
+  /* Transition for icon rotation */
+  .rotate-180 {
+    transform: rotate(180deg);
+  }

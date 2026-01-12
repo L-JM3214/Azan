@@ -1,0 +1,102 @@
+/* src/index.css */
+
+/* 1. Google Fonts - MUST be the very first thing */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* 2. Tailwind base import */
+@import "tailwindcss";
+
+/* 3. Custom theme variables (CSS-first configuration for Tailwind v4) */
+@theme {
+  --color-prayer-violet-50:  #f5f3ff;
+  --color-prayer-violet-100: #ede9fe;
+  --color-prayer-violet-200: #ddd6fe;
+  --color-prayer-violet-300: #c4b5fd;
+  --color-prayer-violet-400: #a78bfa;
+  --color-prayer-violet-500: #8b5cf6;
+  --color-prayer-violet-600: #7c3aed;
+
+  --color-magic-gold:      #fbbf24;
+  --color-magic-gold-light:#fcd34d;
+  --color-magic-gold-dark: #d97706;
+
+  --color-soft-mint:       #a7f3d0;
+  --color-baby-pink:       #fce7f3;
+
+  --font-fun-title: "Fredoka", system-ui, sans-serif;
+  --font-body:      "Quicksand", system-ui, sans-serif;
+
+  /* Custom shadow values – defined here so Tailwind knows them */
+  --shadow-magic:      0 10px 25px -5px rgba(167, 139, 250, 0.3);
+  --shadow-gold-glow:  0 0 20px rgba(251, 191, 36, 0.4);
+  --shadow-magic-lg:   0 15px 35px -8px rgba(167, 139, 250, 0.45);
+}
+
+/* 4. Tell Tailwind where to scan for classes */
+@source "./**/*.{js,jsx,ts,tsx,html}";
+
+/* 5. Custom shadow utilities (now safe to use and @apply) */
+@layer utilities {
+  .shadow-magic {
+    box-shadow: var(--shadow-magic);
+  }
+
+  .shadow-gold-glow {
+    box-shadow: var(--shadow-gold-glow);
+  }
+
+  .hover\:shadow-magic-lg:hover {
+    box-shadow: var(--shadow-magic-lg);
+  }
+
+  .active\:shadow-magic:active {
+    box-shadow: 0 5px 15px -3px rgba(167, 139, 250, 0.4);
+  }
+}
+
+/* 6. Base layer styles */
+@layer base {
+  :root {
+    font-family: var(--font-body);
+    background-color: var(--color-prayer-violet-50);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-fun-title);
+  }
+}
+
+/* 7. Reusable custom classes using @apply */
+.btn-fun {
+  @apply 
+    px-8 py-4 
+    rounded-full 
+    bg-prayer-violet-400 
+    text-white 
+    font-medium 
+    text-lg
+    shadow-magic 
+    hover:bg-prayer-violet-500 
+    hover:shadow-magic-lg
+    transition-all 
+    duration-300 
+    active:scale-95;
+}
+
+.card-fun {
+  @apply 
+    bg-white 
+    rounded-3xl 
+    shadow-magic 
+    hover:shadow-magic-lg
+    p-6 md:p-10 
+    border-2 
+    border-prayer-violet-200
+    transition-all 
+    duration-300;
+}

@@ -1,0 +1,28 @@
+/* src/components/ProjectsCarousel.css */
+
+/* Embla base overrides for better kid-friendliness */
+.embla__container {
+    display: flex;
+  }
+  
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+  
+  /* Arrow hover enhancement */
+  .embla__button:hover:not(:disabled) {
+    transform: scale(1.15);
+  }
+  
+  .embla__button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .card-fun {
+      flex-direction: column !important;
+    }
+  }

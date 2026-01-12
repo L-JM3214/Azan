@@ -1,0 +1,46 @@
+/* src/components/HeroHeader.css */
+
+.hero-header {
+    position: relative;
+  }
+  
+  .hero-title {
+    text-shadow: 0 4px 12px rgba(167, 139, 250, 0.25);
+  }
+  
+  .hero-image {
+    object-fit: cover;
+    transition: all 0.5s ease;
+  }
+  
+  /* Little animations for extra fun */
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.1); }
+  }
+  
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse-slow 12s infinite ease-in-out;
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 30s linear infinite;
+  }
+  
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 6s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
