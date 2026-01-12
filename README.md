@@ -2,9 +2,6 @@
 
 **A magical, fun, and child-friendly coding adventure platform** built for K-12 kids to learn programming through games, robots, websites, and creative projects!
 
-![Project Preview](https://via.placeholder.com/1280x720?text=Little+Africa+Coding+Hero+Screenshot)  
-*(Replace this with a real screenshot of your VideoHero / HeroHeader component)*
-
 ## 🌟 About the Project
 
 Azn Tech is an interactive web app designed to make coding **exciting and accessible** for young learners. With a playful violet-gold-white theme, cute illustrations, smooth animations, and magical components, kids can explore:
