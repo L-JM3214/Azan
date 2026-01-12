@@ -16,12 +16,21 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Smooth scroll function
+  const scrollToSection = (id) => {
+    setIsOpen(false); // Close mobile menu
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const navItems = [
-    { label: 'Home', href: '#' },
-    { label: 'Code Zone', href: '#' },
-    { label: 'Fun Projects', href: '#' },
-    { label: 'Learn & Play', href: '#' },
-    { label: 'Contact', href: '#' },
+    { label: 'Home', id: 'home' },           // VideoHero / top
+    { label: 'Code Zone', id: 'code-zone' }, // FeaturesSection
+    { label: 'Fun Projects', id: 'projects' }, // ProjectsCarousel
+    { label: 'Learn & Play', id: 'learn-play' }, // ScrollingGallery or FAQ
+    { label: 'Contact', id: 'contact' },     // ContactSection
   ];
 
   return (
@@ -35,7 +44,14 @@ const Navbar = () => {
     >
       <div className="mx-auto px-6 lg:px-12 max-w-7xl h-20 flex items-center justify-between">
         {/* Logo + Brand */}
-        <a href="/" className="flex items-center gap-3 group">
+        <a 
+          href="/" 
+          className="flex items-center gap-3 group"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('home');
+          }}
+        >
           <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-4 border-magic-gold shadow-gold-glow transform group-hover:scale-110 transition-transform">
             <img
               src="https://thumbs.dreamstime.com/b/cute-robot-gears-clouds-smiling-robot-big-eyes-ears-machine-mechanical-body-parts-illustration-tech-gadget-cute-421284066.jpg"
@@ -53,27 +69,28 @@ const Navbar = () => {
           <ul className="flex items-center gap-10">
             {navItems.map((item) => (
               <li key={item.label}>
-                <a
-                  href={item.href}
+                <button
+                  onClick={() => scrollToSection(item.id)}
                   className="
                     text-lg font-medium text-gray-700 hover:text-prayer-violet-600
                     transition-colors relative after:absolute after:bottom-[-6px] 
                     after:left-0 after:w-0 after:h-1 after:bg-magic-gold 
                     after:transition-all hover:after:w-full
+                    bg-transparent border-none cursor-pointer
                   "
                 >
                   {item.label}
-                </a>
+                </button>
               </li>
             ))}
           </ul>
 
-          <a
-            href="#signup"
+          <button
+            onClick={() => scrollToSection('signup')}
             className="btn-fun bg-magic-gold hover:bg-magic-gold-dark text-gray-900 hover:text-white px-10 py-4 text-lg font-medium"
           >
-            Join Adventure!🚀
-          </a>
+            Join Adventure! 🚀
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -98,24 +115,22 @@ const Navbar = () => {
         <ul className="flex flex-col items-center gap-10 text-center">
           {navItems.map((item) => (
             <li key={item.label}>
-              <a
-                href={item.href}
-                className="text-2xl font-medium text-gray-800 hover:text-prayer-violet-600 transition-colors"
-                onClick={() => setIsOpen(false)}
+              <button
+                onClick={() => scrollToSection(item.id)}
+                className="text-2xl font-medium text-gray-800 hover:text-prayer-violet-600 transition-colors bg-transparent border-none cursor-pointer"
               >
                 {item.label}
-              </a>
+              </button>
             </li>
           ))}
         </ul>
 
-        <a
-          href="#signup"
+        <button
+          onClick={() => scrollToSection('signup')}
           className="btn-fun bg-magic-gold text-gray-900 text-xl px-12 py-5 mt-6"
-          onClick={() => setIsOpen(false)}
         >
-          Join dventure!🚀
-        </a>
+          Join Adventure! 🚀
+        </button>
       </div>
     </nav>
   );
