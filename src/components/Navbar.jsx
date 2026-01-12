@@ -44,7 +44,7 @@ const Navbar = () => {
             />
           </div>
           <span className="font-fun-title font-bold text-2xl md:text-3xl text-prayer-violet-600 group-hover:text-magic-gold transition-colors">
-            Little Coders
+            Azan
           </span>
         </a>
 
@@ -72,7 +72,7 @@ const Navbar = () => {
             href="#signup"
             className="btn-fun bg-magic-gold hover:bg-magic-gold-dark text-gray-900 hover:text-white px-10 py-4 text-lg font-medium"
           >
-            Join the Adventure! 🚀
+            Join Adventure!🚀
           </a>
         </div>
 
@@ -114,7 +114,7 @@ const Navbar = () => {
           className="btn-fun bg-magic-gold text-gray-900 text-xl px-12 py-5 mt-6"
           onClick={() => setIsOpen(false)}
         >
-          Join the Adventure! 🚀
+          Join dventure!🚀
         </a>
       </div>
     </nav>

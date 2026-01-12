@@ -1,23 +1,47 @@
 /* src/components/VideoHero.css */
-
-/* Ensure video covers full area smoothly */
-.hero-video {
+.video-hero {
+    height: 100vh !important;
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .hero-video {
     object-fit: cover;
-    z-index: -1;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100vw;
+    min-height: 100vh;
   }
   
-  /* Fallback when video can't play (e.g., mobile data saver) */
-  .video-fallback {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+  /* Cloud pulse animation for text */
+  .animate-pulse-slow {
+    animation: pulse-cloud 10s infinite ease-in-out;
   }
   
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .video-hero {
-      min-height: 80vh;
+  @keyframes pulse-cloud {
+    0%, 100% {
+      opacity: 0.92;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.015);
     }
   }
+  
+  /* Mobile adjustments */
+  @media (max-width: 640px) {
+    .video-hero {
+      min-height: 100vh;
+    }
+  }
+
+  .animate-pulse-slow {
+  animation: pulse-cloud 12s infinite ease-in-out;
+}
+
+@keyframes pulse-cloud {
+  0%, 100% { opacity: 0.88; transform: scale(0.98); }
+  50%      { opacity: 1.00; transform: scale(1.015); }
+}
